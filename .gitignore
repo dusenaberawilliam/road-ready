@@ -25,3 +25,9 @@ dist-ssr
 
 # Private project specification
 PROJECT_SPEC.md
+
+# Next.js
+.next
+out
+next-env.d.ts
+*.tsbuildinfo

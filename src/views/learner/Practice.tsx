@@ -43,9 +43,12 @@ function Card({ mode, children, to }: { mode: PracticeMode; children?: React.Rea
       </div>
       {children}
       {lock ? (
-        <Link to="/app/plans" className="btn">
-          <Lock size={14} /> {lock}
-        </Link>
+        <>
+          <span className="small muted">{lock}</span>
+          <Link to="/app/plans" className="btn" title={lock}>
+            <Lock size={14} /> {t('start')}
+          </Link>
+        </>
       ) : (
         <button className="btn primary" onClick={() => navigate(to)}>
           {t('start')}
